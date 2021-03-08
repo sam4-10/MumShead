@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>student Registration Form</title>
+</head>
+<body>
+<div id="global">
+    <form action="#" th:action="@{/addStudent}" th:object="${student}" method="POST">
+<fieldset >
+    <legend>Student Registration Form</legend>
+    <p>
+        <label for="fName" >First Name: </label>
+        <input id="fName" type="text" th:field="*{fName}"/>
+    </p>
+    <p>
+        <label for="lName" >last Name: </label>
+        <input id="lName" type="text" th:field="*{lName}"/>
+    </p>
+    <p>
+        <label for="email" >email: </label>
+        <input id="email" type="text" th:field="*{email}"/>
+    </p>
+    <input type="submit" value="add">
+</fieldset>
+    </form>
+</div>
+</body>
+</html>
